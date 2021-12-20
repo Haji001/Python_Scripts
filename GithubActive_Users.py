@@ -7,7 +7,7 @@ githubUser = "xxxxxx"
 githubPw = "xxxxxxxxx"
 githubCred = (githubUser, githubPw)
 
-usersUrl = 'https://ghdp1.devops.iconectiv.com/api/v3/users?per_page=100'
+usersUrl = 'Your Url'
 usersResp = requests.get(usersUrl, auth=githubCred)
 usersJson = usersResp.json()
 
