@@ -1,6 +1,7 @@
 
 from countryinfo import CountryInfo
 
+""" Simple script to get a country's capital, population, and currency. """
 
 selectCountry = input("Enter the name of your country: ")
 
