@@ -39,6 +39,16 @@ def func():
 
     p = info.find('a', class_="phone-link js-phone").get_text()
     propertyNumber.append(p)
+    
+    try:
+      p = info.find('a', class_="phone-link js-phone").get_text()
+      propertyNumber.append(p)
+    except AttributeError:
+      print("Throwing error")
+    else:
+      p = info.find('a', class_="phone-link js-phone").get_text()
+      propertyNumber.append(p)
+        
 func()
 
 
