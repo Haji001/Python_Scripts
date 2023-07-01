@@ -10,8 +10,16 @@ def salary():
     except ValueError:
         print('INVALID INPUT.\nPlease enter the right numeric value:\n')
 
-this_month_salary = salary()
-print(f"This month's total salary is: ${this_month_salary}")
+
+
+def saving(salary_amount):
+
+    saving_percentage = 0.6
+    salary_amount = salary()
+    savings = saving_percentage * salary_amount
+    remaining = salary_amount - savings
+
+    return savings, remaining
 
 
 
@@ -44,5 +52,19 @@ def expenses():
     except ValueError:
         print('INVALID INPUT.\nPlease enter the right numeric value:\n')
 
+
+this_month_salary = salary()
+print(f"\tThis month's total salary:\t${this_month_salary}")
+print(" ")
+
+this_month_saving = saving(this_month_salary)
+print(f"\tThis month's savings:\t${this_month_saving[0]}")
+print("\t\t\t\tSaving|Remaining")
+print(f"\t\t\t\t${this_month_saving[0]} | ${this_month_saving[1]}")
+print(" ")
+
 total_expenses = expenses()
-print(f"Total expenses:, ${total_expenses}")
+print(f"\tTotal expenses:\t${total_expenses}")
+
+
+
